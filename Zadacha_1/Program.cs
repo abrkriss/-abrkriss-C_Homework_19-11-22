@@ -3,20 +3,23 @@
     //Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
     Console.WriteLine("Введите пятизначное число: ");
-    string num = Console.ReadLine();
+    string number = Console.ReadLine();
 
-   
-    if ((num[0] == num[4] || num[1] == num[3]) && (num!.Length == 5))
+    if   (number!.Length != 5)
     {
-        Console.WriteLine(num + " - является палиндромом");
+        Console.WriteLine("Введено некорректное число. ");
     }
-    else if   (num!.Length != 5)
+    else if ((number[0] == number[4] || number[1] == number[3]) && (number!.Length == 5))
+    {
+        Console.WriteLine(number + " - является палиндромом");
+    }
+    else if   (number!.Length != 5)
     {
         Console.WriteLine("Введено некорректное число. ");
     }
     else
     {
-         Console.WriteLine(num + " -  не является палиндромом");
+         Console.WriteLine(number + " -  не является палиндромом");
     }
 
    
